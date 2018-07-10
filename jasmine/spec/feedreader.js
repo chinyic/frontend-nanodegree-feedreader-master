@@ -69,7 +69,10 @@ $(function() {
          });
 
          it('changes visibility when clicked', function(){
-           expect()
+           menuButton.click();
+           expect(body[0].classList.contains('menu-hidden')).toBe(false);
+           menuButton.click();
+           expect(body[0].classList.contains('menu-hidden')).toBe(true);
 
          })
 
