@@ -68,7 +68,7 @@ function init() {
                  entries.forEach(function(entry) {
                      container.append(entryTemplate(entry));
                  });
-
+//cb = callback
                  if (cb) {
                      cb();
                  }

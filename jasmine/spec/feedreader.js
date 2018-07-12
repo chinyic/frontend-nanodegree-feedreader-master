@@ -92,8 +92,17 @@ $(function() {
        * Remember, loadFeed() is asynchronous so this test will require
        * the use of Jasmine's beforeEach and asynchronous done() function.
        */
+       var entries = 
+       beforeEach(loadFeed(done){
+         set Timeout(function(){
+           value = 0;
+           done();
+         }, 1);
+       });
 
-       
+
+      // var entries = document.querySelector('.')
+
     });
 
 
