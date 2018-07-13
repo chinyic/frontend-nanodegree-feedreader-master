@@ -30,4 +30,4 @@ For this project, we needed to write test suites according to given expectations
 * JavaScript Testing [course](https://www.udacity.com/course/ud549)
 * Jasmine (https://jasmine.github.io/)
 * Slack (https://gwgnanodegrees.slack.com/)
-* (https://www.tutorialspoint.com/jasminejs/jasminejs_writing_text_and_execution.htm)
+* Jasmine Test Writing (https://www.tutorialspoint.com/jasminejs/jasminejs_writing_text_and_execution.htm)
