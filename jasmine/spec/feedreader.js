@@ -85,7 +85,6 @@ $(function() {
        });
 
     /* TODO: Write a new test suite named "Initial Entries" */
-    describe('Initial Entries', function(){
       /* TODO: Write a test that ensures when the loadFeed
        * function is called and completes its work, there is at least
        * a single .entry element within the .feed container.
@@ -95,6 +94,7 @@ $(function() {
 //beforeEach function executes before each of specs. passing 0 into loadFeed() runs it on one iteration.
 // passing empty/anonymous callback function into loadFeed to call done()
 //pass done() to beforeEach
+    describe('Initial Entries', function(){
        beforeEach(function(done){
          loadFeed(0, function(){
            done();
@@ -108,9 +108,34 @@ $(function() {
       });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
+    /* TODO: Write a test that ensures when a new feed is loaded
+     * by the loadFeed function that the content actually changes.
+     * Remember, loadFeed() is asynchronous.
+     */
+    describe('New Feed Selection',function(){
+//variables for old and new content
+    var feed1;
+    var feed2;
+        beforeEach(function(done){
+          //make sure feed is empty using empty selector
+          $('.feed').empty();
+          loadFeed(0, function(){
+            feed1=$('.feed').find(allFeeds.url);
+            //find() selects all descendants of element
+            done();
+          });
+          //finds second item in array
+          loadFeed(1, function(){
+            feed2=$('.feed').find(allFeeds.url);
+            //find() selects all descendants of element
+            done();
+          });
+        });
 
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */
+        it('new feed content does not equal old feed', function(){
+          expect(feed1).not.toBe(feed2);
+        });
+
+  });
+
 }());
