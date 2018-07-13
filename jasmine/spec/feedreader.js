@@ -92,11 +92,12 @@ $(function() {
        * Remember, loadFeed() is asynchronous so this test will require
        * the use of Jasmine's beforeEach and asynchronous done() function.
        */
-
+//beforeEach function executes before each of specs. passing 0 into loadFeed() runs it on one iteration.
+// passing empty/anonymous callback function into loadFeed to call done()
+//pass done() to beforeEach
        beforeEach(function(done){
          loadFeed(0, function(){
            done();
-         // var entries = document.querySelector('.')
     });
   });
 
