@@ -122,7 +122,7 @@ $(function() {
           loadFeed(0, function(){
             feed1 = $('.feed').find(allFeeds.url);
             //find() selects all descendants of element
-            done();
+
           //finds second item in array
           loadFeed(1, function(){
             feed2 = $('.feed').find(allFeeds.url);
