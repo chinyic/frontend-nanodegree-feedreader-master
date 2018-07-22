@@ -120,12 +120,12 @@ $(function() {
           //make sure feed is empty using empty selector
           $('.feed').empty();
           loadFeed(0, function(){
-            feed1 = $('.feed').find(allFeeds.url);
+            feed1 = $('.feed').html();
             //find() selects all descendants of element
 
           //finds second item in array
           loadFeed(1, function(){
-            feed2 = $('.feed').find(allFeeds.url);
+            feed2 = $('.feed').html();
             //find() selects all descendants of element
             done();
               });
